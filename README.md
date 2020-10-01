@@ -55,7 +55,7 @@ GET localhost/api/v1/planets
         "y": "7.0625",
         "z": "2.5",
         "starId": "404e86b7c5"
-    }]
+}]
 ```
 
 Get [systems/stars/planets/moons]
