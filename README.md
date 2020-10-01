@@ -45,7 +45,7 @@ Here are some basic requests to get you on the right path...
 
 Get [systems/stars/planets/moons]
 ```http request
-GET 'localhost/api/v1/planets'
+GET localhost/api/v1/planets
 ```
 ```json
 [{
@@ -55,12 +55,12 @@ GET 'localhost/api/v1/planets'
         "y": "7.0625",
         "z": "2.5",
         "starId": "404e86b7c5"
-    }, ...]
+    }]
 ```
 
 Get [systems/stars/planets/moons]
 ```http request
-GET 'localhost/api/v1/planets/404e86b7c5'
+GET localhost/api/v1/planets/404e86b7c5
 ```
 ```json
 {
