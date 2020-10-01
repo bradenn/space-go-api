@@ -43,9 +43,9 @@ src
 ## API Reference
 Here are some basic requests to get you on the right path...
 
-Get [system/star/planet/moon]
+Get [systems/stars/planets/moons]
 ```http request
-POST localhost/api/v1/planets
+GET 'localhost/api/v1/planets'
 ```
 ```json
 [{
@@ -58,9 +58,9 @@ POST localhost/api/v1/planets
     }, ...]
 ```
 
-Get [system/star/planet/moon]
+Get [systems/stars/planets/moons]
 ```http request
-POST localhost/api/v1/planets/404e86b7c5
+GET 'localhost/api/v1/planets/404e86b7c5'
 ```
 ```json
 {
