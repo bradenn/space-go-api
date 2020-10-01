@@ -1,6 +1,10 @@
 # space-go-api
 This is a basic API made in go to test the Gin Router.
 
+## Conclusion
+Gin is comparable to express for basic static webpages and apis. Gin is a bit too high level and is not worth the extra resources.
+Chi is the framework I will be using in further Go projects.
+
 ## Installation
 Run the following commands in a unix environment (or whatever the Windows equivalent is)
 ```shell script
