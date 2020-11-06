@@ -1,7 +1,7 @@
 package Models
 
 import (
-	"space-api/Config"
+	"space-api/src/Config"
 )
 
 type Star struct {

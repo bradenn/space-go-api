@@ -1,11 +1,10 @@
 package Models
 
 import (
-	"space-api/Config"
+	"space-api/src/Config"
 )
 
-// Gorm does not support upperCaseLetters
-type Planet struct {
+type Moon struct {
 	Id                 string `json:"id" gorm:"column:id"`
 	Name               string `json:"name" gorm:"column:name"`
 	Type               string `json:"type" gorm:"column:type"`
@@ -17,22 +16,22 @@ type Planet struct {
 	OrbitalPeriod      string `json:"orbitalPeriod" gorm:"column:orbitalPeriod"`
 	RotationalPeriod   string `json:"rotationalPeriod" gorm:"column:rotationalPeriod"`
 	UpdateTime         string `json:"updateTime" gorm:"column:updateTime"`
-	StarId             string `json:"starId" gorm:"column:starId"`
+	PlanetId           string `json:"planetId" gorm:"column:planetId"`
 }
 
-func (b *Planet) TableName() string {
-	return "planets"
+func (b *Moon) TableName() string {
+	return "moons"
 }
 
-func FindAllPlanets(planets *[]Planet) (err error) {
-	if err := Config.DB.Find(planets).Error; err != nil {
+func FindAllMoons(moons *[]Moon) (err error) {
+	if err := Config.DB.Find(moons).Error; err != nil {
 		return err
 	}
 	return nil
 }
 
-func FindPlanet(planet *Planet, id string) (err error) {
-	if err := Config.DB.Where("id = ?", id).First(planet).Error; err != nil {
+func FindMoon(moon *Moon, id string) (err error) {
+	if err := Config.DB.Where("id = ?", id).First(moon).Error; err != nil {
 		return err
 	}
 	return nil

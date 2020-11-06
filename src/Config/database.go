@@ -3,13 +3,12 @@ package Config
 import (
 	"fmt"
 	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/postgres"
+	_ "github.com/jinzhu/gorm/dialects/sql"
 	"net/url"
 )
 
 var DB *gorm.DB
 
-// DBConfig represents db configuration
 type DBConfig struct {
 	Host     string
 	Port     int
@@ -33,10 +32,10 @@ func BuildDBConfig() *DBConfig {
 func DbURL(dbConfig *DBConfig) string {
 	u := url.URL{
 		User:     url.UserPassword(dbConfig.User, dbConfig.Password),
-		Scheme:   "postgres",
+		Scheme:   "mysql",
 		Host:     fmt.Sprintf("%s:%d", dbConfig.Host, dbConfig.Port),
 		Path:     dbConfig.DBName,
-		RawQuery: (&url.Values{"sslmode": []string{"disable"}}).Encode(),
+		RawQuery: (&url.Values{"sslmode": []string{"enabled"}}).Encode(),
 	}
 	return  u.String()
 }

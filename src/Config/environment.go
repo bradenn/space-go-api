@@ -16,7 +16,7 @@ type EnvVars struct {
 
 func GetConfig() EnvVars {
 	return EnvVars{
-		Port: getEnvAsInt("PORT", 8080),
+		Port:   getEnvAsInt("PORT", 8080),
 		DBPort: getEnvAsInt("DB_PORT", 5432),
 		DBHost: getEnv("DB_HOST", "host"),
 		DBUser: getEnv("DB_USER", "user"),

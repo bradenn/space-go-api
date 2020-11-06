@@ -2,7 +2,7 @@ package Router
 
 import (
 	"github.com/gin-gonic/gin"
-	"space-api/Controller"
+	"space-api/src/Controller"
 )
 
 func SetupRouter() *gin.Engine {

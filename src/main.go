@@ -5,9 +5,9 @@ import (
 	"github.com/jinzhu/gorm"
 	"github.com/joho/godotenv"
 	"os"
-	"space-api/Config"
-	"space-api/Models"
-	"space-api/Router"
+	"space-api/src/Config"
+	"space-api/src/Models"
+	"space-api/src/Router"
 )
 
 func main() {

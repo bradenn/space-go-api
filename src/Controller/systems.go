@@ -3,7 +3,7 @@ package Controller
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"space-api/Models"
+	"space-api/src/Models"
 )
 
 func GetSystem(c *gin.Context) {
